@@ -3,7 +3,6 @@ Sample solution for the [task-tracker](https://roadmap.sh/projects/task-tracker)
 
 A lightweight Node.js CLI task management application. Add, update, delete, and track tasks using simple npm commands. Tasks persist in a local `db/db.json` file.
 
-https://roadmap.sh/projects/task-tracker
 
 
 **Live Project:** 
