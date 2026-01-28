@@ -32,6 +32,11 @@ npm run start add "Deploy to GitHub"
 # View all tasks
 npm run start list
 
+# Listing tasks by status
+npm run start list done
+npm run start list todo
+npm run start list in-progress
+
 # Update and mark progress
 npm run start update 1 "Master Node.js CLI development"
 npm run start mark-in-progress 1
