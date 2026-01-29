@@ -8,7 +8,8 @@ export default function (program: Command): void {
     .action(async (description: string) => {
       try {
         const tasks = await readTasks();
-        const id = tasks.length + 1;
+        const lastId = tasks[tasks.length - 1].id;
+        const id = lastId ? lastId + 1 : tasks.length + 1
         const task: Task = {
           id,
           description,
