@@ -1,0 +1,21 @@
+{
+  "name": "github-user-activity",
+  "version": "1.0.0",
+  "main": "/dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev":"node --loader ts-node/esm src/main.ts",
+    "start": "node dist/main.js"
+  },
+  "keywords": [],
+  "author": "Hikmatbek Bekturdiev xikmatkhiva.4s@gmail.com",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.5",
+    "@types/node": "^25.0.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
