@@ -5,7 +5,7 @@ A fun interactive CLI game built with Node.js and Inquirer.js. Guess the secret 
 Sample solution for the [number-guessing-game](https://roadmap.sh/projects/number-guessing-game) challenge from [roadmap.sh](https://roadmap.sh).
 
 **Live Project:** 
-* [GitHub - task-tracker CLI](https://github.com/HikmatKhiva/nodeJs-projects/tree/main/number-guessing-game)
+* [GitHub - Number guessing game CLI](https://github.com/HikmatKhiva/nodeJs-projects/tree/main/number-guessing-game)
 
 
 ## 🛠️ Features
