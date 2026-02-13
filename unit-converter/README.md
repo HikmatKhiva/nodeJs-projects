@@ -5,7 +5,6 @@ Built with **pure Node.js**, TypeScript, and minimal dependencies — no Express
 
 
 **Project URLs:** 
-* [Demo](./src/static/screenshot.png)
 * [GitHub - task-tracker CLI](https://github.com/HikmatKhiva/nodeJs-projects/tree/main/task-tracker%20CLI)
 * [Roadmap](https://roadmap.sh/projects/unit-converter)
 
