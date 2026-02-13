@@ -1,0 +1,25 @@
+{
+  "name": "unit-converter",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch server.ts",
+    "build": "tsc && npm run copy-assets",
+    "start": "node ./dist/main.js",
+    "copy-assets": "node scripts/copy-assets.mjs",
+    "docker": "docker build -t unitconv . && docker run -p 3000:3000 unitconv",
+    "test": "vitest",
+    "test:run":"vitest run"
+  },
+  "keywords": [],
+  "author": "Hikmatbek Bekturdiev xikmatkhiva.4s@gmail.com",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.5",
+    "@types/node": "^22.13.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
