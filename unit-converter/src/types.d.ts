@@ -3,5 +3,5 @@ interface ViewData {
   result?: number;
   from?: any;
   to?: string;
-  [key: string]: any; // 👈 allow dynamic keys
+  [key: string]: any; 
 }
