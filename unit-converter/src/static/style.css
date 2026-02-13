@@ -1,0 +1,36 @@
+body {
+  font-family: Arial;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+}
+input,
+select,
+button {
+  padding: 12px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+}
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+}
