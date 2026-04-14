@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') -%>
+  <body class="bg-light-white">
+    <main class="">
+      <div class="text-center">
+        <h1>Error <%= statusCode || 500 %></h1>
+        <p>Something went wrong!</p>
+      </div>
+      <button type="button" class="px-3 py-2 rounded-md self-start text-sm">Reload</button>
+    </main>
+  </body>
+</html>

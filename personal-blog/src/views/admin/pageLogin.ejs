@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') -%>
+  <body>
+    <%- include('../partials/header') -%>
+    <main>
+      <div class="xl:w-[1200px] md:w-4/5 mx-auto mt-10">
+        <h1 class="text-4xl w-10/12 mx-auto">Admin Login</h1>
+        <form
+          action="/admin/login"
+          method="post"
+          class="bg-light-main py-6 px-4 flex flex-col gap-5 mt-7 w-10/12 mx-auto rounded-lg"
+        >
+        <% if(error) { %>
+          <p class="text-red-500 "><%= error %></p>
+        <% } %>
+          <input
+            class="px-3 py-2 rounded outline-none"
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            class="px-3 py-2 rounded outline-none"
+            type="password"
+            name="password"
+            placeholder="password"
+          />
+          <button
+            class="bg-light-white px-3 py-2 rounded-md self-start text-sm"
+            type="submit"
+          >
+            login
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

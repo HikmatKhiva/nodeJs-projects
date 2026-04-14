@@ -1,0 +1,14 @@
+<header class="h-[60px] bg-light-main">
+    <div class="flex xl:w-[1200px] justify-between md:w-4/5 items-center h-full mx-auto">
+        <a href="/" class="text-2xl font-roboto">
+            Blog
+        </a>
+        <% if (isAdmin) { %>
+        <form action="/admin/logout" method="POST">
+            <button class="text-sm bg-light-white px-3 py-1 rounded">
+            Logout
+            </button>
+        </form>
+        <% } %>
+    </div>
+</header>

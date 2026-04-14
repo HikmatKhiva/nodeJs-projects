@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') -%>
+  <body>
+    <%- include('../partials/header') -%>
+    <main>
+      <div class="xl:w-[1200px] md:w-4/5 mx-auto mt-10">
+        <div class="flex justify-between items-end">
+         <div class="flex gap-2 items-center">
+           <%- include('../partials/backButton') -%>
+          <h1 class="text-4xl">Personal Blog</h1>
+         </div>
+          <a href="/admin/new">+ Add</a>
+        </div>
+
+        <div class="flex flex-col">
+          <ul
+            class="bg-light-main mt-7 py-8 px-5 rounded-lg flex flex-col gap-6 min-h-96"
+          >
+         <% articles.forEach((article) => { %>
+            <li class="flex justify-between items-center bg-light-white py-2 px-3 rounded-lg">
+              <a href="/articles/<%= article.id %>" class="flex-1">
+                <span><%= article.title %></span>
+              </a>
+              <div class="inline-flex items-center gap-4">
+                <span>
+                  <%= new Date(article.date).toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                  }) %>
+                </span>
+                <a href="/admin/edit/<%= article.id %>" 
+                  class="text-sm px-3 py-2 bg-light-main rounded-md">
+                  Edit
+                </a>
+                <form action="/admin/delete/<%= article.id %>" method="POST">
+                  <button 
+                    type="submit"
+                    class="text-sm px-3 py-2 bg-red-500 rounded-md text-white">
+                    Delete
+                  </button>
+                </form>
+              </div>
+            </li>
+        <% }); %>
+          </ul>
+          <%- include('../partials/pagination', { currentPage, totalPages }) %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

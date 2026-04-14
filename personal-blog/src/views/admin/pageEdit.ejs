@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') -%>
+  <body>
+    <%- include('../partials/header') -%>
+    <main>
+      <div class="xl:w-[1200px] md:w-4/5 mx-auto mt-10">
+        <div class="flex items-center gap-3 w-10/12 mx-auto">
+          <%- include('../partials/backButton') -%>
+          <h1 class="text-4xl">Edit Article</h1>
+        </div>
+        <form
+          action=""
+          class="bg-light-main py-6 px-4 flex flex-col gap-5 mt-7 w-10/12 mx-auto rounded-lg"
+        >
+          <input
+            class="px-3 py-2 rounded outline-none"
+            type="text"
+            value="<%= article.title %>"
+            placeholder="Article title"
+            name="title"
+          />
+          <input
+            class="px-3 py-2 rounded outline-none"
+            type="date"
+            name="date"
+            value="<%= article.date %>"
+            placeholder="Publish date"
+          />
+          <textarea
+            rows="10"
+            class="px-3 py-2 rounded outline-none resize-none"
+            name="content"
+            placeholder="Article content"
+          >
+<%= article.content %></textarea
+          >
+          <button
+            class="bg-light-white px-3 py-2 rounded-md self-start text-sm"
+            type="submit"
+          >
+            Update
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
