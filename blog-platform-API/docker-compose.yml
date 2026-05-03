@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: blog-platform-API
+    ports:
+      - "5000:5000"
+    environment:
+      - name=value
+    volumes:
+      - .:/app
+      - /app/node_modules   
+    depends_on:
+      - db
+      - redis
+    command: sh -c "npx prisma generate && npm run dev"
+  db:
+    image: postgres:16-alpine
+    container_name: db-blog-platform
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  
+  redis:
+    image: redis:latest
+    container_name: redis-blog-platform
+    ports:
+      - "6379:6379"
+    restart:
+      always  
+
+volumes:
+  postgres_data:

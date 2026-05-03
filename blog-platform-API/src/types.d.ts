@@ -1,0 +1,9 @@
+interface IPost {
+  id: number;
+  title: string;
+  content: string;
+  category: string;
+  tags: string[];
+  createdAt: Date;
+  updateAt: Date;
+}
