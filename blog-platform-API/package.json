@@ -11,7 +11,7 @@
     "docker": "docker build -t blog-platform-API . &&  docker-compose up -d"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hikmatbek Bekturdiev xikmatkhiva.4s@gmail.com",
   "license": "ISC",
   "description": "",
   "devDependencies": {
